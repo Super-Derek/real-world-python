@@ -1,8 +1,8 @@
-## Chapter Overview – Saving Shipwrecked Sailors with Bayes’ Rule
+# Chapter Overview – Saving Shipwrecked Sailors with Bayes’ Rule
 
 In this chapter we build a simple search-and-rescue (SAR) simulation that models the Coast Guard looking for a shipwreck off the fictional coast of Cape Python. The core idea is to use Bayesian probability to decide where to search next, instead of sweeping the ocean blindly. By updating our beliefs after each search pass, we can focus effort on the most promising regions and improve the odds of finding survivors with limited time and resources. :contentReference[oaicite:0]{index=0}
 
-### Goal of the Search and Rescue Model
+## Goal of the Search and Rescue Model
 
 The model’s goal is to answer a practical question:
 
@@ -16,7 +16,7 @@ To do that, the simulation:
 - Uses the results of those searches to update the probabilities (the **posterior**)
 - Repeats the process to see how effective different search strategies are over many trials
 
-### Bayes’ Rule in This Context
+## Bayes’ Rule in This Context
 
 Bayes’ Rule lets us update our belief about where the shipwreck is after we search a region and **do not** find it.
 
@@ -29,7 +29,7 @@ Informally:
 
 So each time we search, we replace the old probabilities with updated ones that reflect what we have just learned. Over multiple passes, the probability mass gradually shifts away from regions that have been searched thoroughly without success and toward regions that have not been searched or were searched less effectively.
 
-### High-Level Structure of the Simulation
+## High-Level Structure of the Simulation
 
 At a high level, the simulation is structured around a loop of:
 
@@ -59,7 +59,7 @@ At a high level, the simulation is structured around a loop of:
    - Run many independent simulations.
    - Track statistics: how often the wreck is found, how many search passes are needed, and how different strategies perform.
 
-### Key Concepts and Functions in the Code
+## Key Concepts and Functions in the Code
 
 The implementation naturally centers around a few concepts and helper functions:
 
